@@ -1,16 +1,21 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterLink
+  ],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
+
 export class HeaderComponent {
- menuAberto = signal(false);
+ menuAberto = false;
 
   alternarMenu(): void {
-    this.menuAberto.update(v => !v);
-  }
-}
+    this.menuAberto = !this.menuAberto;
+  }}

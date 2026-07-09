@@ -1,0 +1,27 @@
+<div class="min-h-screen bg-gray-100">
+
+  <div class="max-w-5xl mx-auto p-8">
+
+    <div class="bg-white rounded-xl shadow-lg p-8">
+
+      <h1 class="text-3xl font-bold mb-6">
+        Bem-vindo ao Reis Portal
+      </h1>
+
+      <div *ngIf="usuario">
+
+        <p><strong>Nome:</strong> {{ usuario.nome }}</p>
+
+        <p><strong>Usuário:</strong> {{ usuario.username }}</p>
+
+        <p><strong>Email:</strong> {{ usuario.email }}</p>
+
+        <p><strong>Perfil:</strong> {{ usuario.role }}</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
