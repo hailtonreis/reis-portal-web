@@ -51,7 +51,7 @@ export class Login {
 
         this.carregando = false;
 
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/sobre/sobre']);
 
       },
 
