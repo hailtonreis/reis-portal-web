@@ -21,7 +21,8 @@ export interface UsuarioLogado {
 })
 export class UsuarioService {
 
-  private readonly API = 'http://localhost:8080/usuarios';
+  //private readonly API = 'http://localhost:8080/usuarios';
+  private readonly API = 'https://hailtonreis.tech/usuarios';
 
   private http = inject(HttpClient);
 
