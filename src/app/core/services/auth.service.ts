@@ -12,7 +12,7 @@ import { TokenService } from './token.service';
 export class AuthService {
 
   //private readonly API = 'http://localhost:8080/auth';
-  private readonly API = 'https://hailtonreis.tech/auth';
+  private readonly API = 'https://api.hailtonreis.tech/auth';
   
   private http = inject(HttpClient);
 
