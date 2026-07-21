@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { LucideAngularModule, Eye, EyeOff } from 'lucide-angular';
 
 
@@ -13,7 +13,8 @@ import { AuthService } from '../../../core/services/auth.service';
   imports: [
     CommonModule,
     FormsModule,
-    LucideAngularModule
+    LucideAngularModule,
+    RouterLink
   ],
   templateUrl: './login.html',
   styleUrl: './login.scss'
@@ -51,7 +52,7 @@ export class Login {
 
         this.carregando = false;
 
-        this.router.navigate(['/sobre/sobre']);
+        this.router.navigate(['/sobre']);
 
       },
 

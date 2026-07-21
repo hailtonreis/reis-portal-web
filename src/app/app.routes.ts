@@ -5,8 +5,6 @@ import { PublicLayout } from './layout/public-layout/public-layout';
 import { PrivateLayout } from './layout/private-layout/private-layout';
 
 export const routes: Routes = [
-
-  // Área pública
   {
     path: '',
     component: PublicLayout,
@@ -22,23 +20,26 @@ export const routes: Routes = [
       }
     ]
   },
-
-  // Área autenticada
+ {
+  path: 'sobre',
+  component: PrivateLayout,
+  children: [
+    {
+      path: '',
+      loadComponent: () =>
+        import('./features/sobre/sobre')
+          .then(m => m.SobreComponent)
+    }
+  ]
+},
   {
-    path: 'sobre',
-    component: PrivateLayout,
-    children: [
-      {
-        path: 'sobre',
-        loadComponent: () =>
-          import('./features/sobre/sobre').then(m => m.SobreComponent)
-      }
-    ]
+    path: 'cadastro',
+    loadComponent: () =>
+      import('./features/usuarios/cadastro/cadastro-usuario')
+        .then(c => c.CadastroUsuarioComponent)
   },
-
   {
     path: '**',
     redirectTo: ''
   }
-
 ];

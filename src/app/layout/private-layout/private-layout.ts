@@ -8,7 +8,6 @@ import { FooterComponent } from '../footer/footer';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    FooterComponent
   ],
   templateUrl: './private-layout.html',
   styleUrl: './private-layout.scss'

@@ -13,10 +13,9 @@ export class AuthService {
 
   //private readonly API = 'http://localhost:8080/auth';
   private readonly API = 'https://api.hailtonreis.tech/auth';
-  
-  private http = inject(HttpClient);
 
-  private tokenService = inject(TokenService);
+  private readonly http = inject(HttpClient);
+  private readonly tokenService = inject(TokenService);
 
   login(request: LoginRequest): Observable<LoginResponse> {
 
@@ -24,18 +23,16 @@ export class AuthService {
       .post<LoginResponse>(`${this.API}/login`, request)
       .pipe(
         tap(response => {
-
           this.tokenService.salvarToken(response.token);
-
         })
       );
+  }
 
+  isAuthenticated(): boolean {
+    return this.tokenService.estaAutenticado();
   }
 
   logout(): void {
-
     this.tokenService.removerToken();
-
   }
-
 }
