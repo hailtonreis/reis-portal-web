@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 
 import { HomeComponent } from './features/home/home';
 import { PublicLayout } from './layout/public-layout/public-layout';
-import { PrivateLayout } from './layout/private-layout/private-layout';
 
 export const routes: Routes = [
   {
@@ -20,18 +19,6 @@ export const routes: Routes = [
       }
     ]
   },
- {
-  path: 'sobre',
-  component: PrivateLayout,
-  children: [
-    {
-      path: '',
-      loadComponent: () =>
-        import('./features/sobre/sobre')
-          .then(m => m.SobreComponent)
-    }
-  ]
-},
   {
     path: 'cadastro',
     loadComponent: () =>
