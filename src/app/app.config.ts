@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import {
   provideHttpClient,
@@ -17,7 +17,13 @@ export const appConfig: ApplicationConfig = {
 
     provideZonelessChangeDetection(),
 
-    provideRouter(routes),
+    provideRouter(
+  routes,
+  withInMemoryScrolling({
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled'
+  })
+),
 
     provideHttpClient(
       withFetch(),

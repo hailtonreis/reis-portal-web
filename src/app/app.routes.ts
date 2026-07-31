@@ -26,6 +26,12 @@ export const routes: Routes = [
         .then(c => c.CadastroUsuarioComponent)
   },
   {
+    path: 'casamento',
+    loadComponent: () =>
+      import('./layout/public-layout/portfolio/casamento/casamento')
+        .then(c => c.CasamentoComponent)
+  },
+  {
     path: '**',
     redirectTo: ''
   }
