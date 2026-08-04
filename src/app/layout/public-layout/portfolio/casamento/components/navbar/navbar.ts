@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
+  standalone: true,
   imports: [
     CommonModule,
     RouterLink
@@ -14,30 +15,39 @@ import { RouterLink } from '@angular/router';
 export class NavbarComponent {
 
 
-  menuItems = [
-  {
-    label: 'Início',
-    link: '#inicio'
-  },
-  {
-    label: 'Nossa História',
-    link: '#historia'
-  },
-  {
-    label: 'Cerimônia',
-    link: '#cerimonia'
-  },
-  {
-    label: 'Galeria',
-    link: '#galeria'
-  },
-  {
-    label: 'Presentes',
-    link: '#presentes'
-  },
-  {
-    label: 'Mensagens',
-    link: '#mensagens'
+  menuAberto = false;
+
+
+  alternarMenu(): void {
+    this.menuAberto = !this.menuAberto;
   }
-];
+
+
+  menuItems = [
+    {
+      label: 'Início',
+      link: '#inicio'
+    },
+    {
+      label: 'Nossa História',
+      link: '#historia'
+    },
+    {
+      label: 'Cerimônia',
+      link: '#cerimonia'
+    },
+    {
+      label: 'Galeria',
+      link: '#galeria'
+    },
+    {
+      label: 'Presentes',
+      link: '#presentes'
+    },
+    {
+      label: 'Mensagens',
+      link: '#mensagens'
+    }
+  ];
+
 }

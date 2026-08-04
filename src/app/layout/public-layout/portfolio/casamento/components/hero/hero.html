@@ -3,18 +3,18 @@
   class="relative flex min-h-screen items-center justify-center overflow-hidden">
 
 
-  <!-- Imagem de fundo -->
+  <!-- Imagem -->
 
   <img
     src="assets/images/casal-hero.jpg"
     alt="Casal"
-    class="absolute inset-0 h-full w-full object-cover" />
+    class="absolute inset-0 h-full w-full object-cover object-center md:object-center" />
 
 
   <!-- Overlay -->
 
   <div
-    class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60">
+    class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70">
   </div>
 
 
@@ -22,13 +22,13 @@
   <!-- Conteúdo -->
 
   <div
-    class="relative z-10 mx-auto max-w-4xl px-6 text-center text-white">
+    class="relative z-10 mx-auto max-w-5xl px-5 pt-24 text-center text-white">
 
 
     <!-- Data -->
 
     <span
-      class="rounded-full border border-white/40 bg-white/20 px-5 py-2 text-sm backdrop-blur">
+      class="inline-block rounded-full border border-white/40 bg-white/20 px-5 py-2 text-sm backdrop-blur">
 
       {{ casamento.data }}
 
@@ -39,12 +39,12 @@
     <!-- Nomes -->
 
     <h1
-      class="mt-8 text-6xl font-light tracking-wide md:text-7xl">
+      class="mt-8 text-4xl font-light tracking-wide sm:text-5xl md:text-7xl">
 
 
       {{ casamento.noivo }}
 
-      <span class="mx-4 text-rose-200">
+      <span class="mx-2 text-rose-200 sm:mx-4">
         &
       </span>
 
@@ -58,11 +58,9 @@
     <!-- Frase -->
 
     <p
-      class="mx-auto mt-8 max-w-2xl text-xl leading-9 text-rose-100">
-
+      class="mx-auto mt-6 max-w-2xl text-base leading-7 text-rose-100 sm:text-xl sm:leading-9">
 
       "{{ casamento.frase }}"
-
 
     </p>
 
@@ -71,22 +69,18 @@
     <!-- Contador -->
 
     <div
-      class="mt-16 grid grid-cols-4 gap-4">
+      class="mt-10 grid grid-cols-2 gap-3 sm:mt-16 sm:grid-cols-4 sm:gap-4">
 
 
       <div
-        class="rounded-2xl bg-white/20 p-6 backdrop-blur">
+        class="rounded-2xl bg-white/20 p-4 backdrop-blur sm:p-6">
 
-        <div class="text-4xl font-bold">
-
+        <div class="text-3xl font-bold sm:text-4xl">
           {{ contador.dias }}
-
         </div>
 
-        <div class="mt-2 text-sm uppercase tracking-widest">
-
+        <div class="mt-2 text-xs uppercase tracking-widest sm:text-sm">
           Dias
-
         </div>
 
       </div>
@@ -94,18 +88,14 @@
 
 
       <div
-        class="rounded-2xl bg-white/20 p-6 backdrop-blur">
+        class="rounded-2xl bg-white/20 p-4 backdrop-blur sm:p-6">
 
-        <div class="text-4xl font-bold">
-
+        <div class="text-3xl font-bold sm:text-4xl">
           {{ contador.horas }}
-
         </div>
 
-        <div class="mt-2 text-sm uppercase tracking-widest">
-
+        <div class="mt-2 text-xs uppercase tracking-widest sm:text-sm">
           Horas
-
         </div>
 
       </div>
@@ -113,18 +103,14 @@
 
 
       <div
-        class="rounded-2xl bg-white/20 p-6 backdrop-blur">
+        class="rounded-2xl bg-white/20 p-4 backdrop-blur sm:p-6">
 
-        <div class="text-4xl font-bold">
-
+        <div class="text-3xl font-bold sm:text-4xl">
           {{ contador.minutos }}
-
         </div>
 
-        <div class="mt-2 text-sm uppercase tracking-widest">
-
+        <div class="mt-2 text-xs uppercase tracking-widest sm:text-sm">
           Minutos
-
         </div>
 
       </div>
@@ -132,18 +118,14 @@
 
 
       <div
-        class="rounded-2xl bg-white/20 p-6 backdrop-blur">
+        class="rounded-2xl bg-white/20 p-4 backdrop-blur sm:p-6">
 
-        <div class="text-4xl font-bold">
-
+        <div class="text-3xl font-bold sm:text-4xl">
           {{ contador.segundos }}
-
         </div>
 
-        <div class="mt-2 text-sm uppercase tracking-widest">
-
+        <div class="mt-2 text-xs uppercase tracking-widest sm:text-sm">
           Segundos
-
         </div>
 
       </div>
@@ -156,7 +138,7 @@
     <!-- Botões -->
 
     <div
-      class="mt-14 flex flex-wrap justify-center gap-5">
+      class="mt-10 flex flex-col justify-center gap-4 sm:mt-14 sm:flex-row">
 
 
       <button

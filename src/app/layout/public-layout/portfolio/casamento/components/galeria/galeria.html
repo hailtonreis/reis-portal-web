@@ -1,32 +1,37 @@
 <section
   id="galeria"
-  class="bg-white py-24">
+class="scroll-mt-32 bg-white pt-24 pb-16 sm:pt-28 sm:pb-24">
+
 
   <div
-    class="mx-auto max-w-7xl px-6">
+    class="mx-auto max-w-7xl px-5 sm:px-6">
 
 
     <div
-      class="mx-auto mb-16 max-w-3xl text-center">
+      class="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+
 
       <span
-        class="rounded-full bg-rose-100 px-5 py-2 text-sm font-semibold text-rose-700">
+        class="inline-block rounded-full bg-rose-100 px-5 py-2 text-sm font-semibold text-rose-700">
 
         Galeria
 
       </span>
 
 
+
       <h2
-        class="mt-6 text-5xl font-light text-slate-900">
+        class="mt-6 text-3xl font-light leading-tight text-slate-900 sm:text-4xl md:text-5xl">
 
         {{ galeria.titulo }}
 
       </h2>
 
 
+
+
       <p
-        class="mt-6 text-lg leading-8 text-slate-600">
+        class="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
 
         {{ galeria.descricao }}
 
@@ -37,8 +42,15 @@
 
 
 
+
+
+
+    <!-- Fotos -->
+
+
     <div
-      class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      class="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+
 
 
       <div
@@ -47,11 +59,20 @@
 
 
         <img
+
           [src]="foto.imagem"
+
           [alt]="foto.descricao"
+
           loading="lazy"
+
           decoding="async"
-          class="h-96 w-full object-cover transition duration-500 group-hover:scale-110">
+
+          width="600"
+
+          height="400"
+
+          class="h-72 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-80 lg:h-96">
 
 
       </div>
@@ -61,20 +82,32 @@
 
 
 
+
+
+
+    <!-- Frase -->
+
+
     <div
-      class="mt-16 text-center">
+      class="mt-12 text-center sm:mt-16">
+
 
       <p
-        class="text-lg italic text-slate-500">
+        class="mx-auto max-w-3xl text-base italic leading-7 text-slate-500 sm:text-lg">
+
 
         "O amor não consiste em olhar um para o outro,
         mas sim em olhar juntos na mesma direção."
 
+
       </p>
+
 
     </div>
 
 
+
   </div>
+
 
 </section>
