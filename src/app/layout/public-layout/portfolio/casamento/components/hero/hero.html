@@ -1,0 +1,185 @@
+<section
+  id="inicio"
+  class="relative flex min-h-screen items-center justify-center overflow-hidden">
+
+
+  <!-- Imagem de fundo -->
+
+  <img
+    src="assets/images/casal-hero.jpg"
+    alt="Casal"
+    class="absolute inset-0 h-full w-full object-cover" />
+
+
+  <!-- Overlay -->
+
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60">
+  </div>
+
+
+
+  <!-- Conteúdo -->
+
+  <div
+    class="relative z-10 mx-auto max-w-4xl px-6 text-center text-white">
+
+
+    <!-- Data -->
+
+    <span
+      class="rounded-full border border-white/40 bg-white/20 px-5 py-2 text-sm backdrop-blur">
+
+      {{ casamento.data }}
+
+    </span>
+
+
+
+    <!-- Nomes -->
+
+    <h1
+      class="mt-8 text-6xl font-light tracking-wide md:text-7xl">
+
+
+      {{ casamento.noivo }}
+
+      <span class="mx-4 text-rose-200">
+        &
+      </span>
+
+      {{ casamento.noiva }}
+
+
+    </h1>
+
+
+
+    <!-- Frase -->
+
+    <p
+      class="mx-auto mt-8 max-w-2xl text-xl leading-9 text-rose-100">
+
+
+      "{{ casamento.frase }}"
+
+
+    </p>
+
+
+
+    <!-- Contador -->
+
+    <div
+      class="mt-16 grid grid-cols-4 gap-4">
+
+
+      <div
+        class="rounded-2xl bg-white/20 p-6 backdrop-blur">
+
+        <div class="text-4xl font-bold">
+
+          {{ contador.dias }}
+
+        </div>
+
+        <div class="mt-2 text-sm uppercase tracking-widest">
+
+          Dias
+
+        </div>
+
+      </div>
+
+
+
+      <div
+        class="rounded-2xl bg-white/20 p-6 backdrop-blur">
+
+        <div class="text-4xl font-bold">
+
+          {{ contador.horas }}
+
+        </div>
+
+        <div class="mt-2 text-sm uppercase tracking-widest">
+
+          Horas
+
+        </div>
+
+      </div>
+
+
+
+      <div
+        class="rounded-2xl bg-white/20 p-6 backdrop-blur">
+
+        <div class="text-4xl font-bold">
+
+          {{ contador.minutos }}
+
+        </div>
+
+        <div class="mt-2 text-sm uppercase tracking-widest">
+
+          Minutos
+
+        </div>
+
+      </div>
+
+
+
+      <div
+        class="rounded-2xl bg-white/20 p-6 backdrop-blur">
+
+        <div class="text-4xl font-bold">
+
+          {{ contador.segundos }}
+
+        </div>
+
+        <div class="mt-2 text-sm uppercase tracking-widest">
+
+          Segundos
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- Botões -->
+
+    <div
+      class="mt-14 flex flex-wrap justify-center gap-5">
+
+
+      <button
+        class="rounded-xl bg-rose-600 px-8 py-4 font-semibold text-white transition hover:bg-rose-700">
+
+        Confirmar Presença
+
+      </button>
+
+
+
+      <button
+        class="rounded-xl border border-white bg-white/10 px-8 py-4 font-semibold backdrop-blur transition hover:bg-white/20">
+
+        Ver Lista de Presentes
+
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>

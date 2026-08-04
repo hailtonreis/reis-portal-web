@@ -1,0 +1,80 @@
+<section
+  id="galeria"
+  class="bg-white py-24">
+
+  <div
+    class="mx-auto max-w-7xl px-6">
+
+
+    <div
+      class="mx-auto mb-16 max-w-3xl text-center">
+
+      <span
+        class="rounded-full bg-rose-100 px-5 py-2 text-sm font-semibold text-rose-700">
+
+        Galeria
+
+      </span>
+
+
+      <h2
+        class="mt-6 text-5xl font-light text-slate-900">
+
+        {{ galeria.titulo }}
+
+      </h2>
+
+
+      <p
+        class="mt-6 text-lg leading-8 text-slate-600">
+
+        {{ galeria.descricao }}
+
+      </p>
+
+
+    </div>
+
+
+
+    <div
+      class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+
+      <div
+        *ngFor="let foto of galeria.fotos"
+        class="group overflow-hidden rounded-3xl shadow-lg">
+
+
+        <img
+          [src]="foto.imagem"
+          [alt]="foto.descricao"
+          loading="lazy"
+          decoding="async"
+          class="h-96 w-full object-cover transition duration-500 group-hover:scale-110">
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <div
+      class="mt-16 text-center">
+
+      <p
+        class="text-lg italic text-slate-500">
+
+        "O amor não consiste em olhar um para o outro,
+        mas sim em olhar juntos na mesma direção."
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>

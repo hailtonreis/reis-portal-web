@@ -1,0 +1,87 @@
+<nav
+  class="fixed top-0 left-0 right-0 z-50 border-b border-rose-100 bg-white/90 backdrop-blur">
+
+  <div
+    class="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
+
+
+    <!-- Logo Reis Portal -->
+
+    <a
+      routerLink="/"
+      class="flex items-center gap-4">
+
+
+      <div
+        class="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-sky-600">
+
+        <img
+          src="assets/images/logo.png"
+          alt="Reis"
+          class="h-9 w-9 object-contain" />
+
+      </div>
+
+
+      <div>
+
+        <div
+          class="text-xl font-bold text-slate-900">
+
+          Reis
+
+          <span class="text-rose-700">
+            Portal
+          </span>
+
+        </div>
+
+
+        <div
+          class="text-xs uppercase tracking-widest text-slate-500">
+
+          Soluções Digitais
+
+        </div>
+
+
+      </div>
+
+
+    </a>
+
+
+
+    <!-- Menu Casamento -->
+
+    <nav
+      class="hidden items-center gap-8 lg:flex">
+
+
+      <a
+        *ngFor="let item of menuItems"
+        [href]="'/casamento' + item.link"
+        class="font-medium text-slate-600 transition hover:text-rose-600">
+
+        {{ item.label }}
+
+      </a>
+
+
+    </nav>
+
+
+
+    <!-- CTA -->
+
+    <button
+      class="rounded-xl bg-rose-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-rose-700 hover:shadow-lg hover:shadow-rose-300/40">
+
+      Conheça o Produto
+
+    </button>
+
+
+  </div>
+
+</nav>
