@@ -10,7 +10,8 @@ export class TranscricaoService {
 
   private readonly http = inject(HttpClient);
 
-  private readonly apiUrl = 'http://localhost:8000/transcription';
+  //private readonly apiUrl = 'http://localhost:8000/transcription';
+  private readonly apiUrl = 'https://ai.hailtonreis.tech/transcription';
 
   transcrever(arquivo: File): Observable<TranscriptionResponse> {
 
