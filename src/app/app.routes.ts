@@ -15,22 +15,33 @@ export const routes: Routes = [
       {
         path: 'login',
         loadComponent: () =>
-          import('./features/auth/login/login').then(m => m.Login)
+          import('./features/auth/login/login')
+            .then(m => m.Login)
       }
     ]
   },
+
+  {
+    path: 'reis-ai',
+    loadComponent: () =>
+      import('./layout/public-layout/reis-ai/reis-ai')
+        .then(c => c.ReisAiComponent)
+  },
+
   {
     path: 'cadastro',
     loadComponent: () =>
       import('./features/usuarios/cadastro/cadastro-usuario')
         .then(c => c.CadastroUsuarioComponent)
   },
+
   {
     path: 'casamento',
     loadComponent: () =>
       import('./layout/public-layout/portfolio/casamento/casamento')
         .then(c => c.CasamentoComponent)
   },
+
   {
     path: '**',
     redirectTo: ''
