@@ -73,10 +73,6 @@ export class ReisAiComponent {
 
    next: (resposta) => {
 
-      alert('RESPOSTA RECEBIDA DA API!');
-
-      console.log('RESPOSTA DA API:', resposta);
-
       this.resultado = resposta;
       this.erro = null;
       this.processando = false;
@@ -85,22 +81,16 @@ export class ReisAiComponent {
     },
 
         error: (erro: HttpErrorResponse) => {
-          
-         console.error('ERRO NA TRANSCRIÇÃO:', erro);
-  console.error('STATUS:', erro.status);
-  console.error('STATUS TEXT:', erro.statusText);
-  console.error('URL:', erro.url);
-  console.error('ERROR:', erro.error);
 
-  this.processando = false;
-  this.resultado = null;
+            this.processando = false;
+            this.resultado = null;
 
-  this.erro =
-    `Erro HTTP ${erro.status} - ${erro.statusText || 'sem status'}`;
+            this.erro =
+              `Erro HTTP ${erro.status} - ${erro.statusText || 'sem status'}`;
 
-  this.cdr.markForCheck();
+            this.cdr.markForCheck();
         }
-      });
+    });
   }
 
   baixarTexto(): void {
