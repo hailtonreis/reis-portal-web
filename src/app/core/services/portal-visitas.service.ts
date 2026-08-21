@@ -15,4 +15,8 @@ export class PortalVisitasService {
     return this.http.get<number>(this.apiUrl);
   }
 
+  registrarVisita(): Observable<number> {
+    return this.http.post<number>(this.apiUrl, {});
+  }
+
 }
